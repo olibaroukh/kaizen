@@ -1,0 +1,922 @@
+[
+  {
+    "numero": 1,
+    "nom": "La Vitrine",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z1-x-1",
+            "label": "Vitrine propre, sans trace",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z1-x-2",
+            "label": "Enseigne propre, pas de toiles d'araignées",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z1-x-3",
+            "label": "Enseigne éclairée la journée (timer à jour)",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z1-x-4",
+            "label": "Trottoir propre, pas de feuilles ni mégots",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z1-x-5",
+            "label": "Bandeaux mutuelles à jour (horaires et réseaux)",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 2,
+    "nom": "L'Espace Attente",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z2-x-1",
+            "label": "Le mobilier est en PARFAIT état",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z2-x-2",
+            "label": "Le tapis est propre",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z2-x-3",
+            "label": "Le meuble à café est propre (pas de bouteille vide ni trace)",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z2-x-4",
+            "label": "Les tiroirs sont approvisionnés (ni plus ni moins)",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z2-x-5",
+            "label": "La coupelle à bonbons est pleine",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 3,
+    "nom": "La Table de Ventes",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z3-x-1",
+            "label": "2 chaises clients et un tabouret en bon état par table simple",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z3-x-2",
+            "label": "Tiroirs rangés (fournitures complètes ni plus ni moins, dossiers devis rangés)",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z3-x-3",
+            "label": "Stock péniches et sacs approvisionné",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z3-x-4",
+            "label": "Tests de lecture en bon état",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z3-x-5",
+            "label": "Miroir propre et en bon état (un par table double)",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z3-x-6",
+            "label": "Aucune péniche sur les tables de ventes",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z3-x-7",
+            "label": "Aucun cable ne dépasse",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 4,
+    "nom": "Le Facing Montures",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z4-x-1",
+            "label": "Tous les emplacements montures sont occupés",
+            "concept": "UDM",
+            "optional": false
+          },
+          {
+            "id": "z4-x-2",
+            "label": "Toutes les montures sont sous la bonne signalétique",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z4-x-3",
+            "label": "Les miroirs sont propres",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z4-x-4",
+            "label": "Les plateaux rouges sont en bon état et disponibles",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z4-x-5",
+            "label": "Les facing sécurisés sont bien fermés",
+            "concept": "Ancien",
+            "optional": false
+          },
+          {
+            "id": "z4-x-6",
+            "label": "Les écrans sont tous allumés",
+            "concept": "UDM",
+            "optional": false
+          },
+          {
+            "id": "z4-x-7",
+            "label": "Les PLV sont à jour",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z4-x-8",
+            "label": "Pas de trous dans AUCUN facing",
+            "concept": "Ancien",
+            "optional": false
+          },
+          {
+            "id": "z4-x-9",
+            "label": "Les tiroirs de stock montures sont rangés et présentables",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z4-x-10",
+            "label": "Les stocks d'étuis sont rangés sous les bons meubles",
+            "concept": "Ancien",
+            "optional": false
+          },
+          {
+            "id": "z4-x-11",
+            "label": "Les stocks d'étuis sont rangés dans les meubles le plus proche",
+            "concept": "UDM",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 5,
+    "nom": "Les Niches Sport et Vue",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z5-x-1",
+            "label": "Les niches/étagères sont propres et rangées",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z5-x-2",
+            "label": "Tous les univers du sport sont bien présentés et identifiables",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z5-x-3",
+            "label": "Toutes les références de la stratégie Montures sont présentées",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 6,
+    "nom": "Les Étagères Contacto",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z6-x-1",
+            "label": "Les étagères sont propres et rangées",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z6-x-2",
+            "label": "Toutes les références de la stratégie Contacto sont présentées",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z6-x-3",
+            "label": "Les produits sont présentés en quantité suffisante",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z6-x-4",
+            "label": "Pas de produit périmé",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 7,
+    "nom": "Les Étagères Audio",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z7-x-1",
+            "label": "Toutes les références de la stratégie Audio sont présentées",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z7-x-2",
+            "label": "Pas de produit périmé",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z7-x-3",
+            "label": "Les produits de démonstrations sont à jour",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 8,
+    "nom": "La Caisse",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z8-x-1",
+            "label": "Poste de caisse rangé, propre et fonctionnel",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z8-x-2",
+            "label": "Tiroir caisse fermé à clé",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z8-x-3",
+            "label": "Imprimantes laser et multifonction opérationnelles",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z8-x-4",
+            "label": "TPE et EDI Chèque en parfait état de fonctionnement",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z8-x-5",
+            "label": "Tiroir 4 rangé (fournitures complètes ni plus ni moins)",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z8-x-6",
+            "label": "Stock de fourniture rangé et pas de sur-stock",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z8-x-7",
+            "label": "Poubelle vidée chaque soir",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 9,
+    "nom": "L'Arrière Caisse",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z9-x-1",
+            "label": "Péniches en livraison rangées par ordre alphabétique",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z9-x-2",
+            "label": "Stocks papier, sacs… approvisionnés et rangés",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z9-x-3",
+            "label": "Aides à la vente à jour et rangés",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z9-x-4",
+            "label": "Stocks cordons et prémontées rangés",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z9-x-5",
+            "label": "Présentoirs à Cordons et Bouchons d'oreilles complets",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 10,
+    "nom": "L'Atelier",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": "Montage",
+        "items": [
+          {
+            "id": "z10-Montage-1",
+            "label": "Poste de montage rangé sans péniches",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-2",
+            "label": "Outils à leur place (pinces, tournevis) en bon état",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-3",
+            "label": "Produits de nettoyage identifiés et rangés",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-4",
+            "label": "Bac à décanter vidé à la bonne fréquence",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-5",
+            "label": "Poubelle vidée chaque soir",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-6",
+            "label": "Dossiers à facturer traités",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-7",
+            "label": "Armoire à vis rangée et tiroirs identifiables",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Montage-8",
+            "label": "Évier propre ",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      },
+      {
+        "nom": "Réceptions",
+        "items": [
+          {
+            "id": "z10-Réceptions-1",
+            "label": "Bac à ultrason propre",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Réceptions-2",
+            "label": "Téléphone fonctionnel",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Réceptions-3",
+            "label": "Attentes de réceptions verres rangées",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      },
+      {
+        "nom": "Audio",
+        "items": [
+          {
+            "id": "z10-Audio-1",
+            "label": "Bac à ultrason propre",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Audio-2",
+            "label": "Aspirateur fonctionnel",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Audio-3",
+            "label": "Outillage audio complet et rangé",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      },
+      {
+        "nom": "Commandes Verres",
+        "items": [
+          {
+            "id": "z10-Commandes_Verres-1",
+            "label": "Lecteur Tess fonctionnel et calibré",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Commandes_Verres-2",
+            "label": "Dossiers en attente traités",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z10-Commandes_Verres-3",
+            "label": "Toutes les commandes sont passées le soir",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 11,
+    "nom": "La Salle Audio",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z11-x-1",
+            "label": "Salle propre et rangée pour accueillir le client",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z11-x-2",
+            "label": "La Plaquette de prix des prothèses à jour",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z11-x-3",
+            "label": "Diplômes présentés dans les cadres et lisibles",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z11-x-4",
+            "label": "Tout le matériel est opérationnel",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z11-x-5",
+            "label": "L'écran est allumé et la vidéo à jour tourne en boucle",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z11-x-6",
+            "label": "Les tiroirs sont PARFAITEMENT rangés",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 12,
+    "nom": "L'Armoire de Salles Audio",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z12-x-1",
+            "label": "Les péniches sont rangées et parfaitement identifiables",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z12-x-2",
+            "label": "Pas de sur-stock produits",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z12-x-3",
+            "label": "Stock prothèses suivant la stratégie Audio",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 13,
+    "nom": "Salle Opto / Contacto",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z13-x-1",
+            "label": "Salle propre et rangée pour accueillir le client",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-2",
+            "label": "Boîte d'essai complète",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-3",
+            "label": "Poste de réfraction propre et opérationnel",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-4",
+            "label": "Lentilles d'essais en stock idéal - ni plus ni moins",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-5",
+            "label": "Diplômes présentés dans les cadres et lisibles",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-6",
+            "label": "Péniches contacto proprement rangées et identifiables",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-7",
+            "label": "Affiche Easylens à jour",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z13-x-8",
+            "label": "Poubelle vidée chaque soir",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 14,
+    "nom": "L'Espace Enfants",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z14-x-1",
+            "label": "Jeux et coloriages disponibles",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z14-x-2",
+            "label": "Crayons de couleurs taillés",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z14-x-3",
+            "label": "Espace propre et rangé et en bon état",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 15,
+    "nom": "La Salle de Pause",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z15-x-1",
+            "label": "Frigo et micro-onde propre et rangé",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z15-x-2",
+            "label": "Égouttoir vide en fin de journée",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z15-x-3",
+            "label": "Casiers individuels fermés",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z15-x-4",
+            "label": "Poubelle vidée chaque soir",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 16,
+    "nom": "Les Toilettes",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z16-x-1",
+            "label": "Toilettes propres et rangées",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z16-x-2",
+            "label": "Papier toilette disponible et stock suffisant disponible",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z16-x-3",
+            "label": "Distributeur de savon plein et fonctionnel",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z16-x-4",
+            "label": "Pas d'affaire personnelle (brosse à dents…) non rangée",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z16-x-5",
+            "label": "Poubelle vidée chaque soir",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 17,
+    "nom": "La Péniche",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": "Attente Montage",
+        "items": [
+          {
+            "id": "z17-Attente_Montage-1",
+            "label": "Tous les produits sont présents avec les bip",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z17-Attente_Montage-2",
+            "label": "Éttiquettes lisibles",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z17-Attente_Montage-3",
+            "label": "La date de commande verres est bien notée et lisible",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      },
+      {
+        "nom": "Attente Livraison",
+        "items": [
+          {
+            "id": "z17-Attente_Livraison-1",
+            "label": "Les montures sont propres et dans leurs étuis",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z17-Attente_Livraison-2",
+            "label": "Le reste à payer est clairement affiché",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 18,
+    "nom": "Le Cockpit",
+    "optional": false,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z18-x-1",
+            "label": "Tableau/Ecran propre et lisible",
+            "concept": "Tous",
+            "optional": false
+          },
+          {
+            "id": "z18-x-2",
+            "label": "Informations TOUTES à jour et connues de TOUS",
+            "concept": "Tous",
+            "optional": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 19,
+    "nom": "Le Meuble Vitrine",
+    "optional": true,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z19-x-1",
+            "label": "Meuble vitrine propre",
+            "concept": "Tous",
+            "optional": true
+          },
+          {
+            "id": "z19-x-2",
+            "label": "Affiche de l'opération en cours à jour",
+            "concept": "Tous",
+            "optional": true
+          },
+          {
+            "id": "z19-x-3",
+            "label": "Montures de marque présentées avec son équivalent MdC",
+            "concept": "Tous",
+            "optional": true
+          },
+          {
+            "id": "z19-x-4",
+            "label": "Tous les produits ont leur prix bien visible",
+            "concept": "Tous",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "numero": 20,
+    "nom": "Le Présentoir Verres",
+    "optional": true,
+    "secteurs": [
+      {
+        "nom": null,
+        "items": [
+          {
+            "id": "z20-x-1",
+            "label": "Tous les verres sont présentés",
+            "concept": "Tous",
+            "optional": true
+          },
+          {
+            "id": "z20-x-2",
+            "label": "Aucun Verre Manquant",
+            "concept": "Tous",
+            "optional": true
+          },
+          {
+            "id": "z20-x-3",
+            "label": "Tous les verres sont propres sans traces ni poussière",
+            "concept": "Tous",
+            "optional": true
+          }
+        ]
+      }
+    ]
+  }
+]
