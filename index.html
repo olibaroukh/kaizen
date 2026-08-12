@@ -96,6 +96,10 @@ html,body{height:100%;background:linear-gradient(160deg,#1A1210 0%,#0D0D0D 40%,#
 .photo-box .cap{font-size:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--muted);margin-bottom:5px}
 .photo-frame{aspect-ratio:4/3;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--muted);text-align:center;padding:6px;font-weight:500;background:var(--bg3);border:1px dashed var(--border);overflow:hidden}
 .photo-frame img{width:100%;height:100%;object-fit:contain;border-radius:8px;cursor:zoom-in}
+.proof-frame{position:relative;cursor:pointer}
+.proof-add{display:none;font-size:11px;color:var(--muted);font-weight:600}
+.proof-frame.empty .proof-add{display:block}
+.proof-frame.uploading .proof-add{display:block;color:var(--red)}
 .items{padding:4px 14px 6px}
 .item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
 .item:last-child{border-bottom:none}
@@ -227,6 +231,7 @@ const WORKER_URL = 'https://zimbra-relay.oli-baroukh.workers.dev';
 const STORE_TOKEN = 'OC-bilan-store-2026';
 const MAGASINS_CSV_URL = 'https://raw.githubusercontent.com/olibaroukh/bilan-passage/main/magasins.csv';
 const REF_PHOTO_BASE = 'https://olibaroukh.github.io/kaizen/ref/';
+const PHOTO_VIEW_URL = `${WORKER_URL}/kaizen-photo`;
 
 let magasins = [];
 let currentMag = null;
@@ -389,6 +394,18 @@ function photoUrlForSecteur(zone, secteur){
   return `${REF_PHOTO_BASE}zone-${zone.numero}.png`;
 }
 
+function secteurSlug(secteur){
+  return secteur.nom ? secteur.nom.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-') : 'x';
+}
+
+function proofPhotoKey(zone, secteur){
+  return `${currentMag.code}/${currentMois}/zone-${zone.numero}-${secteurSlug(secteur)}.jpg`;
+}
+
+function proofPhotoUrl(key){
+  return `${PHOTO_VIEW_URL}?key=${encodeURIComponent(key)}&v=${Date.now()}`;
+}
+
 function zoneVisibleForStore(zone){
   if (zone.numero === 19) return !!currentMag.meubleVitrine;
   if (zone.numero === 20) return !!currentMag.presentoirVerres;
@@ -406,6 +423,47 @@ function openLightbox(src){
 function closeLightbox(){
   document.getElementById('lightbox').classList.remove('active');
 }
+
+let hiddenFileInput = document.createElement('input');
+hiddenFileInput.type = 'file';
+hiddenFileInput.accept = 'image/*';
+hiddenFileInput.capture = 'environment';
+hiddenFileInput.style.display = 'none';
+document.body.appendChild(hiddenFileInput);
+let activeProofFrame = null;
+
+function onProofClick(frameEl){
+  if (auditClosed) { alert("Cet audit est clôturé, impossible d'ajouter une photo."); return; }
+  activeProofFrame = frameEl;
+  hiddenFileInput.value = '';
+  hiddenFileInput.click();
+}
+
+hiddenFileInput.addEventListener('change', async () => {
+  const file = hiddenFileInput.files[0];
+  if (!file || !activeProofFrame) return;
+  const frame = activeProofFrame;
+  const key = frame.dataset.key;
+  frame.classList.add('uploading');
+  frame.querySelector('.proof-add').textContent = 'Envoi...';
+  try {
+    const resp = await fetch(`${WORKER_URL}/kaizen-photo?code=${encodeURIComponent(currentMag.code)}&key=${encodeURIComponent(key)}`, {
+      method: 'POST',
+      headers: { 'Content-Type': file.type || 'image/jpeg', 'X-Store-Token': STORE_TOKEN },
+      body: file
+    });
+    const data = await resp.json();
+    if (!data.ok) throw new Error(data.error || 'Erreur');
+    const img = frame.querySelector('img');
+    img.style.display = '';
+    img.src = proofPhotoUrl(key);
+    frame.classList.remove('empty', 'uploading');
+  } catch (err) {
+    frame.classList.remove('uploading');
+    frame.querySelector('.proof-add').textContent = '📷 Ajouter';
+    alert("Erreur d'envoi de la photo : " + err.message);
+  }
+});
 
 function renderZones(){
   const list = document.getElementById('zoneList');
@@ -449,8 +507,11 @@ function renderZones(){
                 </div>
               </div>
               <div class="photo-box">
-                <div class="cap">Preuve — ce contrôle</div>
-                <div class="photo-frame">Bientôt disponible</div>
+                <div class="cap">Preuve — ce mois-ci</div>
+                <div class="photo-frame proof-frame" data-key="${proofPhotoKey(zone, secteur)}" onclick="onProofClick(this)">
+                  <img src="${proofPhotoUrl(proofPhotoKey(zone, secteur))}" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('empty')" onclick="event.stopPropagation(); if(this.style.display!=='none') openLightbox(this.src)">
+                  <span class="proof-add">📷 Ajouter</span>
+                </div>
               </div>
             </div>
             <div class="items">
