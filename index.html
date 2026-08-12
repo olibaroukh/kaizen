@@ -235,6 +235,7 @@ let referentiel = null;
 let itemsState = {};
 let auditClosed = false;
 let prenom = '';
+let openZones = new Set();
 
 async function loadMagasins(){
   try {
@@ -371,13 +372,18 @@ function onPrenomInput(){
   });
 }
 
+// Zones dont le décor physique change selon le concept (Ancien/UDM), même si
+// la liste des items de contrôle est identique — nécessitent 2 photos de référence.
+const ZONES_PHOTO_PAR_CONCEPT = [3, 4, 8, 9];
+
 function photoUrlForSecteur(zone, secteur){
   if (secteur.nom) {
     const slug = secteur.nom.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-');
     return `${REF_PHOTO_BASE}zone-${zone.numero}-${slug}.png`;
   }
   const concepts = new Set(secteur.items.map(i => i.concept).filter(c => c && c !== 'Tous'));
-  if (concepts.size && currentMag.concept) {
+  const forceConcept = ZONES_PHOTO_PAR_CONCEPT.includes(zone.numero);
+  if ((concepts.size || forceConcept) && currentMag.concept) {
     return `${REF_PHOTO_BASE}zone-${zone.numero}-${currentMag.concept.toLowerCase()}.png`;
   }
   return `${REF_PHOTO_BASE}zone-${zone.numero}.png`;
@@ -392,8 +398,6 @@ function zoneVisibleForStore(zone){
 function itemApplicable(item){
   return item.concept === 'Tous' || (item.concept || '').toLowerCase() === (currentMag.concept || '').toLowerCase();
 }
-
-let openZones = new Set();
 
 function openLightbox(src){
   document.getElementById('lightboxImg').src = src;
