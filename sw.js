@@ -4,7 +4,7 @@
 // directes en D1 en temps réel, aucun besoin de fonctionnement hors-ligne) afin
 // de toujours servir la dernière version disponible sur le réseau.
 
-const SW_VERSION = '2026.08.13-3';
+const SW_VERSION = '2026.08.13-4';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
